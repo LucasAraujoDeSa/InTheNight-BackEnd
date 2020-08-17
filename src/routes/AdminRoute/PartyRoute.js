@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 //controllers
-    const PartyController = require('../controllers/PartyController')
+    const PartyController = require('../../controllers/PartyController')
 //Middlewares
-    const PartyMiddleware = require('../middlewares/PartysMiddleware')
+    const PartyMiddleware = require('../../middlewares/PartysMiddleware')
 
 router.post('/create',PartyMiddleware,PartyController.create)
 router.delete('/delete/:id',PartyController.delete) 

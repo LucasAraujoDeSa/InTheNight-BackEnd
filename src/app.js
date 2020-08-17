@@ -12,10 +12,10 @@ const bodyParser = require('body-parser');
 
 //Routes
     //Party
-        const Party = require('./routes/PartyRoute');
+        const Party = require('./routes/AdminRoute/PartyRoute');
         app.use('/partys',Party)
     //User
-        const User = require('./routes/UserRoute');
+        const User = require('./routes/UserRoute/RegistryRoute');
         app.use('/user', User)
 
 
