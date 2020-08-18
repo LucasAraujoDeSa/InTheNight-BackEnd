@@ -16,7 +16,7 @@ const User = new Schema({
     password:{
         type: String,
         required: true,
-        select:true,
+        select: false,
     },
     createdAt:{
         type: Date,

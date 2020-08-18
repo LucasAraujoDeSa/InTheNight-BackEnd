@@ -1,11 +1,13 @@
 const UserModel = require('../models/UserModel')
+const generateToken = require('../controllers/generateToken')
 
 class UserController{
     async create(req,res){
         try{
-            const user = await new UserModel(req.body)
+            const user = await UserModel.create(req.body)
             user.save()
-            return res.status(200).json({response: 'user created'})
+
+            return res.status(200).json({response: 'user created',token:generateToken({id:user.id})})
         }catch(err){
             return res.status(400).json({err: "not created"})
         }
