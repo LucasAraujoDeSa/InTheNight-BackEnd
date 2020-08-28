@@ -7,7 +7,6 @@ const router = express.Router();
 
 router.post("/registry",UserMiddleware,UserController.create)
 router.delete("/delete/:id",UserController.delete)
-router.put("/update/:id",UserMiddleware,UserController.update)
 router.get("/filter/all",UserController.all)
 
  
